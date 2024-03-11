@@ -13,4 +13,4 @@
 
 ### Дополнительные материалы
 - Документация SASS - https://sass-lang.com/install/
-- БЭМ (Блок,Элемент,Модификатор) -  https://itgirlschool.pro/pl/teach/control/lesson/view?id=320463217&editMode=0
+- БЭМ (Блок, Элемент, Модификатор) -  https://itgirlschool.pro/pl/teach/control/lesson/view?id=320463217&editMode=0
