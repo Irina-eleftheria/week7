@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #162831;
+  }
+.container {
+    display: grid;
+    /* border: 1px solid red; */
+    justify-items: center;
+  }
+  /*меню навигации*/
+  .top_line {
+    display: grid;
+    grid-template-columns: 60px max-content 160px;
+    /* border: 1px solid blue; */
+    width: 1298px;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    justify-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  .navmenu {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    list-style-type: none;
+    padding-left: 0;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.navmenu>li {
+    padding-left: 22px;
+    margin-left: 22px;
+}
+.navmenu>li>a:hover {
+    color: #018ABE;
+}
+.navmenu>li>a {
+    text-decoration: none;
+    color: white;
+    font-size: 14;
+}
+.navbutton {
+    background-color: #018ABE;
+    color: white;
+    font-size: 13;
+    width: 160px;
+    height: 36px;
+    border-radius: 3%;
+}
+/*заглавные картинка и текст*/
+.firstscreen {
+    background-image: url(../images/first-screen.png);
+    width: 1296px;
+    height: 600px;
+    margin-bottom: 150px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.text {
+    /* position: absolute;
+    top: 276px;
+    left: 840px;
+    right: 840px; */
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    width: 588px;
+    height: 34px;
+}
+.title {
+    /* position: absolute;
+    top: 350px;
+    left: 666px;
+    right: 666px; */
+    color: white;
+    font-size: 64px;
+    text-align: center;
+    width: 588px;
+    height: 180px;
+}
+/*раздел с сеансами*/
+.seans {
+    /* border: 1px solid white; */
+    width: 1296px;
+    height: 700px;
+    display: grid;
+    align-content: space-between;
+    margin-bottom: 150px;
+}
+.seans_title,
+.otzyvy_title,
+.about_title,
+.cost_title {
+    color: white;
+    font-size: 42px;
+    text-align: center;
+}
+.seans_img {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "img1 img2 img3"
+        "img1 img4 img5";
+    align-items: center;
+    justify-items: center;
+}
+.img1 {
+    width: 416px;
+    height: 540px;
+    grid-area: img1;
+}
+.img2 {
+    width: 416px;
+    height: 258px;
+    grid-area: img2;
+}
+.img3 {
+    width: 416px;
+    height: 258px;
+    grid-area: img3;
+}
+.img4 {
+    width: 416px;
+    height: 258px;
+    grid-area: img4;
+}
+.img5 {
+    width: 416px;
+    height: 258px;
+    grid-area: img5;
+}
+/*раздел с отзывами*/
+.otzyvy {
+    /* border: 1px solid white; */
+    width: 1736px;
+    height: 586px;
+    display: grid;
+    margin-bottom: 150px;
+}
+.otzyvy_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+    align-content: center;
+    gap: 50px;
+}
+.card1, .card2, .card3 {
+    background-color: #018ABE;
+    /* border: 1px solid red; */
+    /* width: 636px; */
+    height: 350px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    justify-items: start;
+    align-items: center;
+    font-size: 14px;
+    border-radius: 10%;
+}
+.card1>p,
+.card2>p,
+.card3>p {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.boldtitle {
+    font-weight: bold;
+    font-size: 20px;
+}
+/*Об RitmStyle*/
+.about {
+    /* border: 1px solid white; */
+    width: 1076px;
+    height: 1024px;
+    display: grid;
+    margin-bottom: 150px;
+}
+.about_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+        "box1 box2"
+        "box4 box3";
+}
+.box1 {
+    grid-area: box1;
+}
+.box2 {
+    grid-area: box2;
+}
+.box3 {
+    grid-area: box3;
+}
+.box4 {
+    grid-area: box4;
+}
+.box1, .box3 {
+    /* border: 1px solid red; */
+    color: white;
+    width: 466px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    justify-items: start;
+    align-items: center;
+    font-size: 14px;
+    gap: 20px;
+}
+/*стоимость сеансов*/
+.cost {
+    /* border: 1px solid white; */
+    width: 1076px;
+    height: 614px;
+    display: grid;
+    margin-bottom: 150px;
+}
+.cost_bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.bar1>p, .bar2>p {
+    color: white;
+}
+.bar1 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: start;
+    align-items: center;
+}
+.bar2 {
+    display: grid;
+    grid-template-rows: 90% 10%;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+/*футер*/
+.footer {
+    /* border: 1px solid white; */
+    width: 1296px;
+    height: 604px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 150px;
+    grid-template-areas: 
+        "map footcard1"
+        "map footcard2";
+}
+.map {
+    display: grid;
+    grid-area: map;
+}
+.footcard1 {
+    display: grid;
+    grid-area: footcard1;
+    background-color: #018ABE;
+    color: white;
+    grid-template-columns: 10% 90%;
+    margin-bottom: 10px;
+    border-radius: 5%;
+    align-items: center;
+    align-content: space-around;
+    padding: 30px;
+}
+.footcard2 {
+    display: grid;
+    grid-area: footcard2;
+    background-color: #018ABE;
+    color: white;
+    grid-template-columns: 10% 90%;
+    margin-top: 10px;
+    border-radius: 5%;
+    align-items: center;
+    align-content: space-around;
+    padding: 30px;
+}
+.p_title {
+    display: grid;
+    grid-column: 1/3;
+    font-size: 24px;
+}
+.foot_p1, .foot_p2, .foot_p3 {
+    font-size: 14px;
+}
+.footbutton {
+    display: grid;
+    grid-column: 1/3;
+    background-color: white;
+    color: #018ABE;
+    width: 156px;
+    height: 36px;
+    justify-items: center;
+    align-items: center;
+    border-radius: 3%;
+}
