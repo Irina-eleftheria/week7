@@ -5,14 +5,21 @@ $secondaryColor: pink;
 $mainFont: Arial, Helvetica, sans-serif;
 $secondaryFont: "Times New Roman", Times, serif; 
 
+//Миксины - шаблоны
+@mixin font {
+    font-family: $secondaryFont;
+    font-size: 22px;
+    font-weight: 700;
+}
 
 
 .block {
+    @include font;
     background-color: $mainColor; 
     width: 400px;
     height: 200px;
     margin-bottom: 30px;
-    font-family: $mainFont;
+    
 }
 .block:not(.first) {
     background-color: $secondaryColor;
