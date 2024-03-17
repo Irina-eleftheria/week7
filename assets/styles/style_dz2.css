@@ -7,6 +7,7 @@
     background-color: #162831;
   }
 .container {
+    width: 100%;
     display: grid;
     /* border: 1px solid red; */
     justify-items: center;
@@ -16,8 +17,8 @@
     display: grid;
     grid-template-columns: 60px max-content 160px;
     /* border: 1px solid blue; */
-    width: 1298px;
-    height: 60px;
+    width: 100%;
+    min-height: 60px;
     align-items: center;
     justify-content: space-between;
     align-content: center;
@@ -57,8 +58,8 @@
 /*заглавные картинка и текст*/
 .firstscreen {
     background-image: url(../images/first-screen.png);
-    width: 1296px;
-    height: 600px;
+    width: 100%;
+    min-height: 600px;
     margin-bottom: 150px;
     display: grid;
     justify-items: center;
@@ -87,12 +88,15 @@
     height: 180px;
 }
 /*раздел с сеансами*/
+.main {
+    display: grid;
+    width: 60%;
+}
 .seans {
     /* border: 1px solid white; */
-    width: 1296px;
-    height: 700px;
+    width: 100%;
+    min-height: 700px;
     display: grid;
-    align-content: space-between;
     margin-bottom: 150px;
 }
 .seans_title,
@@ -142,8 +146,8 @@
 /*раздел с отзывами*/
 .otzyvy {
     /* border: 1px solid white; */
-    width: 1736px;
-    height: 586px;
+    width: 100%;
+    min-height: 586px;
     display: grid;
     margin-bottom: 150px;
 }
@@ -158,7 +162,7 @@
     background-color: #018ABE;
     /* border: 1px solid red; */
     /* width: 636px; */
-    height: 350px;
+    min-height: 350px;
     display: grid;
     grid-template-rows: 1fr 2fr 2fr;
     justify-items: start;
@@ -179,8 +183,8 @@
 /*Об RitmStyle*/
 .about {
     /* border: 1px solid white; */
-    width: 1076px;
-    height: 1024px;
+    width: 100%;
+    min-height: 1024px;
     display: grid;
     margin-bottom: 150px;
 }
@@ -220,28 +224,30 @@
 /*стоимость сеансов*/
 .cost {
     /* border: 1px solid white; */
-    width: 1076px;
-    height: 614px;
+    width: 100%;
+    min-height: 614px;
     display: grid;
     margin-bottom: 150px;
 }
 .cost_bar {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-content: center;
 }
 .bar1>p, .bar2>p {
     color: white;
 }
 .bar1 {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 3fr 2fr;
     grid-template-rows: repeat(5, 1fr);
-    justify-items: start;
+    justify-items: center;
     align-items: center;
 }
 .bar2 {
     display: grid;
-    grid-template-rows: 90% 10%;
+    grid-template-rows: 5fr 1fr;
     justify-items: center;
     align-items: center;
     justify-content: center;
@@ -249,8 +255,8 @@
 /*футер*/
 .footer {
     /* border: 1px solid white; */
-    width: 1296px;
-    height: 604px;
+    width: 60%;
+    min-height: 604px;
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 1fr 1fr;
@@ -306,3 +312,92 @@
     align-items: center;
     border-radius: 3%;
 }
+
+
+/*Медиазапросы*/
+
+@media screen and (max-width: 1026px) {
+    .seans_img {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "img1 img2"
+            "img1 img4"
+            "img3 img5";
+}
+.otzyvy {
+    display: none;
+}
+}
+
+
+@media screen and (max-width: 432px) {
+    
+
+
+    .seans_title {
+        font-size: 22px;
+    }
+    .seans_img {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "img5";
+}
+
+.firstscreen {
+    background-image: url(../images/first-screen.png);
+    width: 70%;
+    max-height: 20%;
+}
+
+
+.otzyvy {
+    display: none;
+}
+
+.about_box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+        "box1"
+        "box3";
+}
+.box2, .box4 {
+    display: none;
+}
+
+.cost_bar {
+    
+    grid-template-areas: 
+        "bar1"
+        "bar2";
+}
+.bar1 {
+    grid-area: bar1;
+}
+.bar2 {
+    grid-area: bar2;
+}
+
+.footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    margin-bottom: 150px;
+    grid-template-areas: 
+        "map"
+        "footcard1"
+        "footcard2";
+    gap: 3%;
+}
+
+}
+
