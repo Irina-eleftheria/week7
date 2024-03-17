@@ -95,7 +95,7 @@
         grid-template-columns: 1fr;
     }
     .sections {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;ssss
         grid-template-rows: repeat(3, 1fr);
     }
     .element3 {
